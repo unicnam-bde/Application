@@ -8,7 +8,7 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import ContactScreen from '../screens/Contact';
 
-const config = Platform.select({
+export const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {},
 });

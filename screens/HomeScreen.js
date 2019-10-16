@@ -9,14 +9,15 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
-import {Header} from '../components/Header';
+import { Header } from '../components/Header';
 import { MonoText } from '../components/StyledText';
+
+
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Header style={styles.header} page='ACCEUIL BDE'/>
+      <Header style={styles.header} page='ACCEUIL BDE' />
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
@@ -69,6 +70,8 @@ export default function HomeScreen() {
     </View>
   );
 }
+
+
 
 HomeScreen.navigationOptions = {
   header: null,

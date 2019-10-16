@@ -1,9 +1,6 @@
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
-import {Text, View, StyleSheet} from 'react-native';
-
-import Colors from '../constants/Colors';
-import ViewShot from 'react-native-view-shot';
+import {Text, View, StyleSheet, TouchableHighlight} from 'react-native';
 
 export function Header(props) {
   return (
@@ -13,6 +10,7 @@ export function Header(props) {
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
     header: {
