@@ -4,10 +4,10 @@ import { DashboardStackNavigator } from "./DashboardStackNavigator";
 import { BisStackNav } from "./BisStackNav";
 
 const Drawer = createDrawerNavigator({
-  Dashboard: {
+  "Accueil": {
     screen: DashboardStackNavigator
   },
-  "Dashboard Bis": {
+  "Liens Utiles": {
     screen: BisStackNav
   }
 });

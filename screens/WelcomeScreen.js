@@ -7,7 +7,7 @@ export class WelcomeScreen extends Component {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
           <Button
             title="Login"
-            onPress={() => this.props.navigation.navigate('Dashboard')}
+            onPress={() => this.props.navigation.navigate('Accueil')}
           />
           <Button title="Sign Up" onPress={() => alert('button pressed')} />
         </View>
