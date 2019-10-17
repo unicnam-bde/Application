@@ -1,14 +1,15 @@
 import React from 'react';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator,defaultNavigatonOptions } from 'react-navigation';
 
-import MainTabNavigator from './MainTabNavigator';
-import DrawerNavigation from './Drawer'
+import DrawerNavigation from './Drawer';
+import { WelcomeScreen } from '../screens/WelcomeScreen';
 
-export default createAppContainer(
-  createSwitchNavigator({
-    // You could add another route here for authentication.
-    // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-    Main: MainTabNavigator,
-    Drawer: DrawerNavigation,
-  })
-);
+
+const App = createSwitchNavigator({
+  // You could add another route here for authentication.
+  // Read more at https://reactnavigation.org/docs/en/auth-flow.html
+  Welcome: WelcomeScreen,
+  Drawer: DrawerNavigation,
+})
+
+export default createAppContainer(App);

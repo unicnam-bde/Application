@@ -1,6 +1,8 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import {Platform} from 'react-native';
+import TabBarIcon from '../components/TabBarIcon';
 
 export default function ContactScreen() {
   return (
@@ -15,9 +17,15 @@ export default function ContactScreen() {
 }
 
 ContactScreen.navigationOptions = {
-  title: 'Contact',
+  tabBarLabel: 'Contact',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios' ? 'ios-contact' : 'md-contact'}
+    />
+  ),
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

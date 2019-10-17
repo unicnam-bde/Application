@@ -1,6 +1,8 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import TabBarIcon from '../components/TabBarIcon';
+import {Platform} from 'react-native';
 
 export default function LinksScreen() {
   return (
@@ -15,9 +17,20 @@ export default function LinksScreen() {
 }
 
 LinksScreen.navigationOptions = {
-  title: 'Links',
+  title : 'Links',
+  tabBarLabel: 'Links',
+  headerStyle:{
+    backgroundColor:'#ba002a'
+  },
+  headerTintColor : 'white',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+    />
+  ),
 };
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

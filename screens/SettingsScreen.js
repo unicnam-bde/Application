@@ -1,5 +1,7 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { ExpoConfigView } from '@expo/samples';
+import TabBarIcon from '../components/TabBarIcon';
 
 export default function SettingsScreen() {
   /**
@@ -10,5 +12,12 @@ export default function SettingsScreen() {
 }
 
 SettingsScreen.navigationOptions = {
-  title: 'app.json',
+  tabBarLabel: 'Settings',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+    />
+  ),
 };
