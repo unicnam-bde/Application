@@ -9,30 +9,31 @@ import TabBarIcon from '../components/TabBarIcon';
 
 
 
-export default function HomeScreen() {
+export default function BadgesScreen() {
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
+      <Text>Screen pour badges</Text>
     </View>
   );
 }
 
 
 
-HomeScreen.navigationOptions = {
-  tabBarLabel: 'Accueil',
+BadgesScreen.navigationOptions = {
+  tabBarLabel: 'Badges',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
-        Platform.OS === 'ios' ? 'ios-home' : 'md-home'}
+        Platform.OS === 'ios' ? 'ios-medal' : 'md-medal'}
     />
   ),
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  }
-});
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+    }
+  });
+  

@@ -1,16 +1,16 @@
 import React from "react";
 import { createBottomTabNavigator } from "react-navigation";
-import LinkScreen from "../screens/LinksScreen";
-import SettingsScreen from "../screens/SettingsScreen";
-import ContactScreen from "../screens/Contact";
+import BadgesScreen from "../screens/BadgesScreen";
 import HomeScreen from "../screens/HomeScreen";
+import NotificationsScreen from "../screens/NotificationsScreen";
+import BoutiquesScreen from "../screens/BoutiqueScreen";
 
 export const DashboardTabNavigator = createBottomTabNavigator(
   {
     Home: HomeScreen,
-    Link: LinkScreen,
-    Settings: SettingsScreen,
-    Contact: ContactScreen
+    Badges: BadgesScreen,
+    Notifications : NotificationsScreen,
+    Boutique : BoutiquesScreen
   },
   {
     navigationOptions: ({ navigation }) => {

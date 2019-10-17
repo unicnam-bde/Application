@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet,Text } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
 import {Platform} from 'react-native';
 import TabBarIcon from '../components/TabBarIcon';
@@ -7,17 +7,18 @@ import TabBarIcon from '../components/TabBarIcon';
 export default function ContactScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
+      <Text>Contact</Text>
     </ScrollView>
   );
 }
 
 ContactScreen.navigationOptions = {
+  title : 'Contact',
   tabBarLabel: 'Contact',
+  headerStyle:{
+    backgroundColor:'#ba002a'
+  },
+  headerTintColor : 'white',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
