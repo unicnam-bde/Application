@@ -4,15 +4,21 @@ import {
   StyleSheet,
   Text,
   View,
+  FlatList
 } from 'react-native';
 import TabBarIcon from '../components/TabBarIcon';
-
+import { CardArticle } from '../components/CardArticle';
+import articles from '../assets/Data';
 
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
+      <FlatList
+        data={articles}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({item}) => <CardArticle title={item.title} infos={item.infos} image={item.image}/>}
+        />
     </View>
   );
 }
