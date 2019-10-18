@@ -1,44 +1,44 @@
-import React from 'react';
+import React,{Component} from "react";
 import {
   Platform,
   StyleSheet,
   Text,
   View,
-  FlatList
-} from 'react-native';
-import TabBarIcon from '../components/TabBarIcon';
-import { CardArticle } from '../components/CardArticle';
-import articles from '../assets/Data';
+  FlatList,
+  TouchableOpacity,
+  Button
+} from "react-native";
+import {StackNavigator} from 'react-navigation';
+import { CardArticle } from "../components/CardArticle";
+import articles from "../assets/Data";
 
-
-export default function HomeScreen() {
-  return (
-    <View style={styles.container}>
+export class HomeScreen extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
       <FlatList
         data={articles}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({item}) => <CardArticle title={item.title} infos={item.infos} image={item.image}/>}
-        />
+        keyExtractor={item => item.id.toString()}
+        renderItem={({ item }) => (
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Test')}>
+            <CardArticle
+              title={item.title}
+              infos={item.infos}
+              image={item.image}
+            />
+          </TouchableOpacity>
+        )}
+      />
     </View>
-  );
+    );
+  }
 }
 
 
 
-HomeScreen.navigationOptions = {
-  tabBarLabel: 'Accueil',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios' ? 'ios-home' : 'md-home'}
-    />
-  ),
-};
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff"
   }
 });

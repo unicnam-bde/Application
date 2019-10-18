@@ -9,7 +9,7 @@ import TabBarIcon from '../components/TabBarIcon';
 
 
 
-export default function BoutiquesScreen() {
+export default function TestStack() {
   return (
     <View style={styles.container}>
       <Text>Screen pour Boutique</Text>
@@ -19,8 +19,8 @@ export default function BoutiquesScreen() {
 
 
 
-BoutiquesScreen.navigationOptions = {
-  tabBarLabel: 'Boutique',
+TestStack.navigationOptions = {
+  tabBarLabel: 'TestStack',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
