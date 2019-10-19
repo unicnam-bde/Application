@@ -25,23 +25,16 @@ export default function DetailArticle(props) {
           resizeMode="contain"
         >
           <View
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              justifyContent: "flex-end"
-            }}
+            style={styles.viewTitle}
           >
-            <Text style={{ color: "white", fontSize: 25 }}>Title</Text>
+            <Text style={styles.textTitle}>Title</Text>
           </View>
         </ImageBackground>
         <MonoText style={styles.info}>Date Heure</MonoText>
         <WingBlank style={styles.sondage}>
           <Flex>
-            <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }}>
-              <Button type="default" style={{ borderColor: "#ba002a" }}>
+            <Flex.Item style={styles.placeButton}>
+              <Button type="default" style={styles.sondageButton}>
                 <SondageIcons
                   name={
                     Platform.OS === "ios"
@@ -49,13 +42,13 @@ export default function DetailArticle(props) {
                       : "md-checkmark-circle-outline"
                   }
                 />
-                <Text style={{ marginLeft: 50, color: "#ba002a" }}>
+                <Text style={styles.sondageText}>
                   {" "}Participe
                 </Text>
               </Button>
             </Flex.Item>
-            <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }}>
-              <Button type="default" style={{ borderColor: "#ba002a" }}>
+            <Flex.Item style={styles.placeButton}>
+              <Button type="default" style={styles.sondageButton}>
                 <SondageIcons
                   name={
                     Platform.OS === "ios"
@@ -63,53 +56,32 @@ export default function DetailArticle(props) {
                       : "md-star-outline"
                   }
                 />
-                <Text style={{ marginLeft: 50, color: "#ba002a" }}>
+                <Text style={styles.sondageText}>
                   {" "}Intérresé
                 </Text>
               </Button>
             </Flex.Item>
           </Flex>
         </WingBlank>
-        <View style={{flexDirection:'row',
-              }}>
+        <View style={styles.viewInfo}>
           <Text
-            style={{
-                marginTop: 20,
-              marginLeft: 10,
-                fontWeight: "bold",
-                fontSize: 15
-            }}
+            style={styles.titreInfo}
           >
             Nombre de participants :{" "}
           </Text>
-          <Text style={{marginTop: 20,
-              marginLeft: 10,
-              fontSize:15}}>37</Text>
+          <Text style={styles.textInfo}>37</Text>
         </View>
-        <View style={{flexDirection:'row',
-              }}>
+        <View style={styles.viewInfo}>
           <Text
-            style={{
-                marginTop: 20,
-              marginLeft: 10,
-                fontWeight: "bold",
-                fontSize: 15
-            }}
+            style={styles.titreInfo}
           >
             Lieu :{" "}
           </Text>
-          <Text style={{marginTop: 20,
-              marginLeft: 10,
-              fontSize:15}}>Lieu de l'événement</Text>
+          <Text style={styles.textInfo}>Lieu de l'événement</Text>
         </View>
         
         <Text
-          style={{
-            fontWeight: "bold",
-            marginTop: 20,
-            marginLeft: 10,
-            fontSize: 20
-          }}
+          style={styles.textTitreDetail}
         >
           Details :
         </Text>
@@ -141,13 +113,47 @@ const styles = StyleSheet.create({
     height: windowHeight / 5,
     backgroundColor: "grey"
   },
+  viewTitle:{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: "flex-end"
+  },
+  textTitle :{ color: "white", fontSize: 25 },
   info: {
     marginTop: 10,
     textAlign: "center"
   },
+  sondageButton:{ borderColor: "#ba002a" },
+  placeButton:{ paddingLeft: 4, paddingRight: 4 },
   sondage: {
     marginTop: 10
   },
+  titreInfo:{
+    marginTop: 20,
+  marginLeft: 10,
+    fontWeight: "bold",
+    fontSize: 15
+},
+  sondageText:{ 
+    color: "#ba002a" 
+  },
+  viewInfo:{
+    flexDirection:'row',
+},
+textInfo:{
+  marginTop: 20,
+  marginLeft: 10,
+  fontSize:15
+},
+textTitreDetail :{
+  fontWeight: "bold",
+  marginTop: 20,
+  marginLeft: 10,
+  fontSize: 20
+},
   description: {
     margin: 20
   }

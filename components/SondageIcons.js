@@ -8,7 +8,6 @@ export default function SondageIcons(props) {
     <Ionicons
       name={props.name}
       size={20}
-      style={{marginRight:20}}
       color='#ba002a'
     />
   );
