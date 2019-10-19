@@ -50,7 +50,7 @@ export default function DetailArticle(props) {
                   }
                 />
                 <Text style={{ marginLeft: 50, color: "#ba002a" }}>
-                  Participe
+                  {" "}Participe
                 </Text>
               </Button>
             </Flex.Item>
@@ -64,7 +64,7 @@ export default function DetailArticle(props) {
                   }
                 />
                 <Text style={{ marginLeft: 50, color: "#ba002a" }}>
-                  Interresé
+                  {" "}Intérresé
                 </Text>
               </Button>
             </Flex.Item>
