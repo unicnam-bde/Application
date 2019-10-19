@@ -16,6 +16,7 @@ const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 export default function DetailArticle(props) {
+  const {navigation} = props;
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container}>
@@ -27,14 +28,16 @@ export default function DetailArticle(props) {
           <View
             style={styles.viewTitle}
           >
-            <Text style={styles.textTitle}>Title</Text>
+            <Text style={styles.textTitle}>
+          {navigation.getParam('title', 'default value')}</Text>
           </View>
         </ImageBackground>
-        <MonoText style={styles.info}>Date Heure</MonoText>
+        <MonoText style={styles.info}>{navigation.getParam('date', 'A définir')}</MonoText>
         <WingBlank style={styles.sondage}>
           <Flex>
             <Flex.Item style={styles.placeButton}>
-              <Button type="default" style={styles.sondageButton}>
+              <Button 
+              type="default" style={styles.sondageButton}>
                 <SondageIcons
                   name={
                     Platform.OS === "ios"
@@ -69,7 +72,7 @@ export default function DetailArticle(props) {
           >
             Nombre de participants :{" "}
           </Text>
-          <Text style={styles.textInfo}>37</Text>
+          <Text style={styles.textInfo}>{navigation.getParam('nbParticipant', 'Pas assez')}</Text>
         </View>
         <View style={styles.viewInfo}>
           <Text
@@ -77,7 +80,7 @@ export default function DetailArticle(props) {
           >
             Lieu :{" "}
           </Text>
-          <Text style={styles.textInfo}>Lieu de l'événement</Text>
+          <Text style={styles.textInfo}>{navigation.getParam('lieu', 'A définir')}</Text>
         </View>
         
         <Text
@@ -86,13 +89,7 @@ export default function DetailArticle(props) {
           Details :
         </Text>
         <Text style={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          {navigation.getParam('description', "Pour plus d'information, contacter le BDE.")}
         </Text>
       </ScrollView>
     </View>

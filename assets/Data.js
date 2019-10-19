@@ -8,7 +8,7 @@ export default data = [
     {
        id:181809,
        vote_average:8.1,
-       title:"Les Pulls sont dispo",
+       title:'Les Pulls sont dispo',
        infos:"Foncez à la boutique achetez vos pulls !!",
        image:"logo_bde_rouge_noir"
     }

@@ -21,7 +21,7 @@ export class HomeScreen extends Component {
           keyExtractor={item => item.id.toString()}
           renderItem={({ item }) => (
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate("Article")}
+              onPress={() => this.props.navigation.navigate("Article",{title: item.title,})}
             >
               <CardArticle
                 title={item.title}
