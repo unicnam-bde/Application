@@ -1,0 +1,35 @@
+export default contact = [
+    {
+       c_id:1,
+       c_name:"PAPINI",
+       c_firstname:"Olivia",
+       c_email:"olivia@lecnam.fr",
+       c_phone:"060606060",
+       c_role:"CNAM",
+
+    },
+    {
+       c_id:2,
+       c_firstname:"Catherine",
+       c_name:"MAUMET",
+       c_email:"catherine.maumet@email.fr",
+       c_phone:"",
+       c_role:"CNAM",
+    },
+    {
+        c_id:3,
+        c_firstname:"Thomas",
+        c_name:"ARNOUX",
+        c_email:"arnouxthomas@mail.com",
+        c_phone:"06",
+        c_role:"BDE"
+    },
+    {
+        c_id:4,
+        c_firstname:"Vanessa",
+        c_name:"ASEJO",
+        c_email:"asejovaness@email.fr",
+        c_phone:"",
+        c_role:"BDE"
+    }
+ ]
