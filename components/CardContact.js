@@ -4,7 +4,7 @@ import { Card, WhiteSpace, WingBlank } from "@ant-design/react-native";
 
 export function CardContact(props) {
   return (
-    <View style={{ paddingBottom: 20 }}>
+    <View style={{ marginTop: 20 }}>
       <WingBlank size="lg">
         <Card>
           <Card.Body>
