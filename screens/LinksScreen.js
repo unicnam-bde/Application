@@ -1,17 +1,16 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import { ScrollView, StyleSheet,Text,View } from 'react-native';
 import TabBarIcon from '../components/TabBarIcon';
 import {Platform} from 'react-native';
+import Anchor from '../components/Anchor'
 
 export default function LinksScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
+      {/*Créer un component Entete et ajouter une image au Anchor*/}
+      <Anchor href='http://www.caf.fr' > Site de la CAF pour les APL</Anchor>
+      <Anchor href='http://www.caf.fr' > Mobili jeune</Anchor>
+
     </ScrollView>
   );
 }
@@ -37,4 +36,10 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     backgroundColor: '#fff',
   },
+  titre:{
+    paddingLeft:5,
+    paddingRight:5,
+    fontWeight:'bold',
+    fontSize:30
+  }
 });

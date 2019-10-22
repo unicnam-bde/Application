@@ -138,6 +138,7 @@ const BoutiqueStack = createStackNavigator(
             <Icon
               style={{ paddingLeft: 10 }}
               onPress={() => navigation.openDrawer()}
+              color='white'
               name="md-menu"
               size={30}
             />

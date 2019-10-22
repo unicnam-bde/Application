@@ -132,29 +132,6 @@ export class ContactCNAMScreen extends React.Component {
   }
 }
 
-{/*export function ContactCNAMScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      <FlatList
-        data={contact}
-        keyExtractor={item => item.c_id.toString()}
-        renderItem={({ item }) =>
-          item.c_role == "CNAM" ? (
-            <CardContact
-              name={item.c_name}
-              firstname={item.c_firstname}
-              email={item.c_email}
-              phone={item.c_phone}
-            />
-          ) : (
-            <View style={{ height: 0 }} />
-          )
-        }
-      />
-    </ScrollView>
-  );
-}*/}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
