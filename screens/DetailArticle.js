@@ -10,13 +10,36 @@ import {
 } from "react-native";
 import { Button, WingBlank, Flex } from "@ant-design/react-native";
 import MonoText from "../components/StyledText";
-import SondageIcons from "../components/SondageIcons";
+import SondageEvent from "../components/SondageEvent";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 export default function DetailArticle(props) {
+  
+  function TypeNews(props){
+    switch (props.typeNews) {
+      case 'event':
+        return(
+          <SondageEvent/>
+        )
+        break;
+      case 'project':
+        return(
+          <View/>
+        )
+        break;
+
+      default:
+        return(
+          <View/>
+        )
+        break;
+    }
+  };
+
   const { navigation } = props;
+  
   return (
     <View style={styles.container}>
       <ScrollView style={styles.container}>
@@ -35,32 +58,7 @@ export default function DetailArticle(props) {
           {navigation.getParam("date", "A définir")}
         </MonoText>
         <WingBlank style={styles.sondage}>
-          <Flex>
-            <Flex.Item style={styles.placeButton}>
-              <Button type="default" style={styles.sondageButton}>
-                <SondageIcons
-                  name={
-                    Platform.OS === "ios"
-                      ? "ios-checkmark-circle-outline"
-                      : "md-checkmark-circle-outline"
-                  }
-                />
-                <Text style={styles.sondageText}> Participe</Text>
-              </Button>
-            </Flex.Item>
-            <Flex.Item style={styles.placeButton}>
-              <Button type="default" style={styles.sondageButton}>
-                <SondageIcons
-                  name={
-                    Platform.OS === "ios"
-                      ? "ios-star-outline"
-                      : "md-star-outline"
-                  }
-                />
-                <Text style={styles.sondageText}> Intérresé</Text>
-              </Button>
-            </Flex.Item>
-          </Flex>
+          <TypeNews typeNews={navigation.getParam('type','default')} />
         </WingBlank>
         <View style={styles.viewInfo}>
           <Text style={styles.titreInfo}>Nombre de participants : </Text>
