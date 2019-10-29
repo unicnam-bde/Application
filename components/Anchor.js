@@ -9,8 +9,8 @@ export default function Anchor(props) {
 
     return (
         
-            <Text onPress={this._handlePress}>
-              {props.children}
+            <Text style={{marginBottom: 10,marginLeft:10}} onPress={this._handlePress}>
+              {props.children} : cliquez pour accéder
             </Text>
     );
 }
