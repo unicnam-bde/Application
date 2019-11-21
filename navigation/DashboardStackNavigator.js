@@ -13,7 +13,7 @@ export const DashboardStackNavigator = createStackNavigator(
           headerLeft: (
             <Icon
               style={{ paddingLeft: 10 }}
-              onPress={() => navigation.openDrawer()}
+              onPress={() => this.props.navigation.openDrawer()}
               name="md-menu"
               color='white'
               size={30}

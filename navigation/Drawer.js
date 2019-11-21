@@ -2,6 +2,7 @@ import React from "react";
 import { createDrawerNavigator } from "react-navigation";
 import { DashboardStackNavigator } from "./DashboardStackNavigator";
 import { LinkStackNav, ContactStackNav } from "./DrawerStackNav";
+import { LogOutScreen} from '../screens/LogOutScreen';
 
 const Drawer = createDrawerNavigator({
   "Accueil": {
@@ -12,6 +13,9 @@ const Drawer = createDrawerNavigator({
   },
   "Liens Utiles": {
     screen: LinkStackNav
+  },
+  "Se Déconnecter": {
+    screen : LogOutScreen
   }
 });
 export default Drawer;

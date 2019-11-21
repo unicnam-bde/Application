@@ -3,12 +3,13 @@ import { createAppContainer, createSwitchNavigator,defaultNavigatonOptions } fro
 
 import DrawerNavigation from './Drawer';
 import { WelcomeScreen } from '../screens/WelcomeScreen';
+import { DashboardStackNavigator } from "./DashboardStackNavigator";
+import { AuthLoadingScreen}  from '../screens/AuthLoadingScreen';
 
 
 const App = createSwitchNavigator({
-  // You could add another route here for authentication.
-  // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-  Welcome: WelcomeScreen,
+  AuthLoading : AuthLoadingScreen,
+  App: WelcomeScreen,
   Drawer: DrawerNavigation,
 })
 
