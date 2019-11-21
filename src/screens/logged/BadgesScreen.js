@@ -5,27 +5,27 @@ import {
   Text,
   View,
 } from 'react-native';
-import TabBarIcon from '../components/TabBarIcon';
+import TabBarIcon from '../../ui/components/TabBarIcon';
 
 
 
-export default function BoutiquesScreen() {
+export default function BadgesScreen() {
   return (
     <View style={styles.container}>
-      <Text>Screen pour Boutique</Text>
+      <Text>Screen pour badges</Text>
     </View>
   );
 }
 
 
 
-BoutiquesScreen.navigationOptions = {
-  tabBarLabel: 'Boutique',
+BadgesScreen.navigationOptions = {
+  tabBarLabel: 'Badges',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
-        Platform.OS === 'ios' ? 'ios-cart' : 'md-cart'}
+        Platform.OS === 'ios' ? 'ios-medal' : 'md-medal'}
     />
   ),
 };
@@ -36,3 +36,4 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
     }
   });
+  

@@ -1,6 +1,5 @@
-import React from "react";
-import { Text } from "react-native"
 import { createDrawerNavigator } from "react-navigation";
+
 import { DashboardStackNavigator } from "./DashboardStackNavigator";
 import { LinkStackNav, ContactStackNav } from "./DrawerStackNav";
 import { LogOutScreen} from '../screens/LogOutScreen';

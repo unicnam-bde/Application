@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Icon from '@expo/vector-icons/Ionicons';
 import { createStackNavigator } from 'react-navigation';
-import { DashboardTabNavigator} from '../navigation/DashBoardTabNavigator';
+
+import { DashboardTabNavigator} from './DashBoardTabNavigator';
 
 export const DashboardStackNavigator = createStackNavigator(
     {

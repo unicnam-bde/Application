@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { ExpoConfigView } from '@expo/samples';
-import TabBarIcon from '../components/TabBarIcon';
+import TabBarIcon from '../../ui/components/TabBarIcon';
 
 export default function SettingsScreen() {
   /**

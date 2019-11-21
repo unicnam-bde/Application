@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { createMaterialTopTabNavigator } from "react-navigation";
 import { FlatList } from "react-native-gesture-handler";
-import contact from "../assets/Data_Contact";
-import { CardContact } from "../components/CardContact";
+import contact from "../../ui/assets/Data_Contact";
+import { CardContact } from "../../ui/components/CardContact";
 import { SearchBar } from "react-native-elements";
 
 export class ContactBDEScreen extends React.Component {

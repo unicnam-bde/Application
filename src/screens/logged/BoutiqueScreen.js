@@ -5,11 +5,11 @@ import {
   Text,
   View,
 } from 'react-native';
-import TabBarIcon from '../components/TabBarIcon';
+import TabBarIcon from '../../ui/components/TabBarIcon';
 
 
 
-export default function TestStack() {
+export default function BoutiquesScreen() {
   return (
     <View style={styles.container}>
       <Text>Screen pour Boutique</Text>
@@ -19,8 +19,8 @@ export default function TestStack() {
 
 
 
-TestStack.navigationOptions = {
-  tabBarLabel: 'TestStack',
+BoutiquesScreen.navigationOptions = {
+  tabBarLabel: 'Boutique',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

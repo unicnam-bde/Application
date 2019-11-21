@@ -9,8 +9,8 @@ import {
   Platform
 } from "react-native";
 import { Button, WingBlank, Flex } from "@ant-design/react-native";
-import MonoText from "../components/StyledText";
-import SondageEvent from "../components/SondageEvent";
+import MonoText from "../../ui/components/StyledText";
+import SondageEvent from "../../ui/components/SondageEvent";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;

@@ -9,8 +9,8 @@ import {
   Button
 } from "react-native";
 import { StackNavigator } from "react-navigation";
-import { CardArticle } from "../components/CardArticle";
-import articles from "../assets/Data";
+import { CardArticle } from "../../ui/components/CardArticle";
+import articles from "../../ui/assets/Data";
 
 export class HomeScreen extends Component {
   render() {

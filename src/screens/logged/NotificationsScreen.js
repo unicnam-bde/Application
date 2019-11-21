@@ -1,6 +1,6 @@
 import React from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
-import TabBarIcon from "../components/TabBarIcon";
+import TabBarIcon from "../../ui/components/TabBarIcon";
 
 export default function NotificationsScreen() {
   return (

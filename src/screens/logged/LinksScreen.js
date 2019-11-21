@@ -1,8 +1,8 @@
 import React from 'react';
 import { ScrollView, StyleSheet,Text,View } from 'react-native';
-import TabBarIcon from '../components/TabBarIcon';
+import TabBarIcon from '../../ui/components/TabBarIcon';
 import {Platform} from 'react-native';
-import Anchor from '../components/Anchor'
+import Anchor from '../../ui/components/Anchor'
 
 export default function LinksScreen() {
   return (

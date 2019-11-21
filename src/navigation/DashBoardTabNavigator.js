@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
 import { Platform } from "react-native";
-import BadgesScreen from "../screens/BadgesScreen";
-import { HomeScreen } from "../screens/HomeScreen";
-import NotificationsScreen from "../screens/NotificationsScreen";
-import BoutiquesScreen from "../screens/BoutiqueScreen";
-import TabBarIcon from "../components/TabBarIcon";
 import Icon from "@expo/vector-icons/Ionicons";
-import DetailArticle from "../screens/DetailArticle";
+
+import BadgesScreen from "../screens/logged/BadgesScreen";
+import { HomeScreen } from "../screens/logged/HomeScreen";
+import NotificationsScreen from "../screens/logged/NotificationsScreen";
+import BoutiquesScreen from "../screens/logged/BoutiqueScreen";
+import TabBarIcon from "../ui/components/TabBarIcon";
+import DetailArticle from "../screens/logged/DetailArticle";
 import TestStack from "../screens/TestStack";
 
 const HomeStack = createStackNavigator(
@@ -38,7 +39,7 @@ const HomeStack = createStackNavigator(
     },
     Article: {
       screen: DetailArticle,
-      navigationOptions: ({ navigation }) => {
+      navigationOptions: () => {
         return {
           headerStyle: {
             backgroundColor: "#ba002a"

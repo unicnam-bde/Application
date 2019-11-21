@@ -1,9 +1,7 @@
-import React from 'react';
-import { createAppContainer, createSwitchNavigator,defaultNavigatonOptions } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import DrawerNavigation from './Drawer';
 import { WelcomeScreen } from '../screens/WelcomeScreen';
-import { DashboardStackNavigator } from "./DashboardStackNavigator";
 import { AuthLoadingScreen}  from '../screens/AuthLoadingScreen';
 
 
