@@ -1,4 +1,5 @@
 import React from "react";
+import { Text } from "react-native"
 import { createDrawerNavigator } from "react-navigation";
 import { DashboardStackNavigator } from "./DashboardStackNavigator";
 import { LinkStackNav, ContactStackNav } from "./DrawerStackNav";
@@ -17,5 +18,5 @@ const Drawer = createDrawerNavigator({
   "Se Déconnecter": {
     screen : LogOutScreen
   }
-});
+},);
 export default Drawer;

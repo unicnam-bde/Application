@@ -1,26 +1,16 @@
-import React, { Component } from "react";
-import { View,Button,AsyncStorage } from "react-native";
+import { Component } from "react";
+import { AsyncStorage } from "react-native";
 
 export class LogOutScreen extends Component {
+  async componentDidMount(){
+    await this._signOutAsync();
+  }
     _signOutAsync = async () => {
         await AsyncStorage.clear();
         this.props.navigation.navigate('AuthLoading');
       };
 
   render() {
-    return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Button
-          color="#ba002a"
-          title="Se déconnecter" onPress={this._signOutAsync} 
-        />
-      </View>
-    );
+    return null
   }
 }
