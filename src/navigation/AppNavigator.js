@@ -5,10 +5,10 @@ import { WelcomeScreen } from '../screens/WelcomeScreen';
 import { AuthLoadingScreen}  from '../screens/AuthLoadingScreen';
 
 
-const App = createSwitchNavigator({
+const AppNavigator = createSwitchNavigator({
   AuthLoading : AuthLoadingScreen,
   App: WelcomeScreen,
   Drawer: DrawerNavigation,
 })
 
-export default createAppContainer(App);
+export default createAppContainer(AppNavigator);
