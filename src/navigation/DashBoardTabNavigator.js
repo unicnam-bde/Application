@@ -12,7 +12,6 @@ import NotificationsScreen from "../screens/logged/NotificationsScreen";
 import BoutiquesScreen from "../screens/logged/BoutiqueScreen";
 import TabBarIcon from "../ui/components/TabBarIcon";
 import DetailArticle from "../screens/logged/DetailArticle";
-import TestStack from "../screens/TestStack";
 
 const HomeStack = createStackNavigator(
   {
@@ -80,7 +79,7 @@ const BadgesStack = createStackNavigator(
       }
     },
     Test: {
-      screen: TestStack
+      screen: BoutiquesScreen
     }
   },
   {
@@ -114,7 +113,7 @@ const NotificationStack = createStackNavigator(
       }
     },
     Test: {
-      screen: TestStack
+      screen: BoutiquesScreen
     }
   },
   {
@@ -148,7 +147,7 @@ const BoutiqueStack = createStackNavigator(
       }
     },
     Test: {
-      screen: TestStack
+      screen: BoutiquesScreen
     }
   },
   {

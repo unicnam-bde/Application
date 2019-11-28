@@ -4,7 +4,7 @@ import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import {AppNavigator} from './src/navigation/AppNavigator';
+import AppNavigator from './src/navigation/AppNavigator';
 
 export default function App(props) {
   const [isLoadingComplete, setLoadingComplete] = useState(false);

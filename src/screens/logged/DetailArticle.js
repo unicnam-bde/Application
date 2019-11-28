@@ -45,7 +45,7 @@ export default function DetailArticle(props) {
       <ScrollView style={styles.container}>
         <ImageBackground
           style={styles.bandeau}
-          source={require("../assets/logo_bde_rouge_noir.png")}
+          source={require("../../ui/assets/logo_bde_rouge_noir.png")}
           resizeMode="contain"
         >
           <View style={styles.viewTitle}>

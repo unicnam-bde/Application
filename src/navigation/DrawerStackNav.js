@@ -2,8 +2,8 @@ import React from "react";
 import Icon from "@expo/vector-icons/Ionicons";
 import { createStackNavigator, NavigationActions } from "react-navigation";
 
-import LinksScreen from "../screens/LinksScreen";
-import { ContactTabNavigator } from "../screens/Contact";
+import LinksScreen from "../screens/logged/LinksScreen";
+import { ContactTabNavigator } from "../screens/logged/Contact";
 
 export const LinkStackNav = createStackNavigator(
   {

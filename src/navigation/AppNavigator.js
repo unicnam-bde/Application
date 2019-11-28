@@ -1,8 +1,8 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import DrawerNavigation from './Drawer';
-import { WelcomeScreen } from '../screens/WelcomeScreen';
-import { AuthLoadingScreen}  from '../screens/AuthLoadingScreen';
+import { WelcomeScreen } from '../screens/authentication/WelcomeScreen';
+import { AuthLoadingScreen}  from '../screens/authentication/AuthLoadingScreen';
 
 
 const AppNavigator = createSwitchNavigator({
