@@ -93,11 +93,10 @@ const tabNavigator = createBottomTabNavigator({
 {
   initialRouteName: 'HomeStack',
   /* The header config from HomeScreen is now here */
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: '#f4511e',
-    },
-  }
+  tabBarOptions: {
+    activeTintColor: '#000',
+    inactiveTintColor: '#FFF',
+  },
 }
 
 );
