@@ -163,7 +163,10 @@ export const DashboardTabNavigator = createBottomTabNavigator(
       screen: HomeStack,
       navigationOptions: ({ navigation }) => {
         return {
-          tabBarLabel: "Acceuil",
+          tabBarLabel: "Accueil",
+          tabBarOptions :{
+            activeTintColor : '#ba002a',
+          },
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               focused={focused}
@@ -178,6 +181,9 @@ export const DashboardTabNavigator = createBottomTabNavigator(
       navigationOptions: ({ navigation }) => {
         return {
           tabBarLabel: "Badges",
+          tabBarOptions :{
+            activeTintColor : '#ba002a',
+          },
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               focused={focused}
@@ -192,6 +198,9 @@ export const DashboardTabNavigator = createBottomTabNavigator(
       navigationOptions: ({ navigation }) => {
         return {
           tabBarLabel: "Notifications",
+          tabBarOptions :{
+            activeTintColor : '#ba002a',
+          },
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               focused={focused}
@@ -208,6 +217,9 @@ export const DashboardTabNavigator = createBottomTabNavigator(
       navigationOptions: ({ navigation }) => {
         return {
           tabBarLabel: "Boutique",
+          tabBarOptions :{
+            activeTintColor : '#ba002a',
+          },
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               focused={focused}
