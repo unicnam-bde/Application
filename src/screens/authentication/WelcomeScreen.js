@@ -1,50 +1,94 @@
-import React, { Component } from "react";
-import { View,Button } from "react-native";
+import React, { Component, version } from "react";
+import { View, TouchableOpacity, StyleSheet, TextInput,Text } from "react-native";
 import { createStackNavigator } from "react-navigation";
 
-class LogInScreen extends Component{
-  render(){
-    return(
-      <View>
-          <Button title="Go to the App" onPress={()=> this.props.navigation.navigate("Accueil")}/>
-      </View>
-    )
-  }
-}
-export class WelcomeScreen extends Component {
+class LogInScreen extends Component {
   render() {
     return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#ba002a"
-        }}
-      >
+      <View>
         <Button
-          title="Login"
-          color="white"
-          onPress={() => this.props.navigation.navigate("Acceuil")}
-        />
-        <Button
-          color="white"
-          title="Sign Up"
-          onPress={() => alert("button pressed")}
+          title="Go to the App"
+          onPress={() => this.props.navigation.navigate("Accueil")}
         />
       </View>
     );
   }
 }
-
-export const LogStackNav = createStackNavigator(
-  {
-    "Welcome" :
-    {
-      screen : WelcomeScreen
-    },
-    "LogIn": {
-      screen : LogInScreen
-    }
+export class WelcomeScreen extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.connexion}>
+          <TextInput
+            type="username"
+            placeholder="Login"
+            placeholderTextColor="#C0C0C0"
+            style={styles.input}
+          /> 
+          <TextInput
+            type="password"
+            placeholder="Password"
+            placeholderTextColor="#C0C0C0"
+            style={styles.input}
+          />
+          <View style={{ flexDirection: "row",justifyContent : 'space-between' }}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => this.props.navigation.navigate("Acceuil")}
+            >
+              <Text style={styles.textButton}>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => alert("button pressed")}
+            >
+              <Text style={styles.textButton}>Sign Up</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    );
   }
-);
+}
+
+export const LogStackNav = createStackNavigator({
+  Welcome: {
+    screen: WelcomeScreen
+  },
+  LogIn: {
+    screen: LogInScreen
+  }
+});
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#ba002a"
+  },
+  connexion: {
+    margin: 0,
+    padding: 0,
+    flexDirection: "column",
+    width: 300,
+    height: 300
+  },
+  input: {
+    marginBottom: 20,
+    padding: 5,
+    height: 50,
+    backgroundColor: "#990024",
+    borderRadius: 5,
+    color: "white"
+  },
+  button: {
+    backgroundColor: "white",
+    paddingVertical : 20,
+    paddingHorizontal : 50,
+    alignItems : 'center'
+  },
+  textButton:{
+    color: "#ba002a"
+  }
+});
