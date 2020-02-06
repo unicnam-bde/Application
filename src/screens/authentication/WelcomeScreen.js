@@ -1,6 +1,7 @@
 import React, { Component, version } from "react";
 import { View, TouchableOpacity, StyleSheet, TextInput,Text } from "react-native";
 import { createStackNavigator } from "react-navigation";
+import { WhiteSpace } from "@ant-design/react-native";
 
 class LogInScreen extends Component {
   render() {
@@ -21,7 +22,7 @@ export class WelcomeScreen extends Component {
         <View style={styles.connexion}>
           <TextInput
             type="username"
-            placeholder="Login"
+            placeholder="Email CNAM"
             placeholderTextColor="#C0C0C0"
             style={styles.input}
           /> 
@@ -40,10 +41,13 @@ export class WelcomeScreen extends Component {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.button}
-              onPress={() => alert("button pressed")}
+              onPress={() => this.props.navigation.navigate("SignUp")}
             >
               <Text style={styles.textButton}>Sign Up</Text>
             </TouchableOpacity>
+          </View>
+          <View style={{flexDirection :"row", justifyContent:"center"}}>
+            <Text style={styles.forgetpasswd}>Mot de passe oublié ?</Text>
           </View>
         </View>
       </View>
@@ -86,9 +90,16 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     paddingVertical : 20,
     paddingHorizontal : 50,
-    alignItems : 'center'
+    alignItems : 'center',
+    borderRadius : 10,
   },
   textButton:{
     color: "#ba002a"
+  },
+  forgetpasswd:
+  {
+    paddingTop: 10,
+    color:"white",
+    justifyContent: "center"
   }
 });
